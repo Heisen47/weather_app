@@ -3,18 +3,27 @@ import "./styles/style.css";
 
 const closeModalBtn = document.getElementById('closeModalBtn');
 
-
 closeModalBtn.addEventListener('click', closeModal);
 
+
 const btn = document.querySelector("#btn");
-btn.addEventListener('click', openModal);
+
+btn.addEventListener('click', ()=>{
+    if (locationInput.checkValidity()) {
+        openModal();
+    } else {
+        console.log('Invalid input. Please enter a valid location.');
+    }
+
+});
+
 
 function closeModal() {
     modal.style.display = 'none';
   }
 
 function openModal(e) {
-    e.preventDefault();
+    // e.preventDefault();
     modal.style.display = 'block';
     GetData();
   }
@@ -73,17 +82,5 @@ function DisplayData(location ,data){
     <p>UV index: ${data.Uv} </p> 
     `
 }
-// function checkInput(e,location){
-//     e.preventDefault()
-//     if (typeof location === 'string'){
-//         openModal()
-//     }
-//     else{
-//         alert("Please enter a Valid City Name!")
-//     }
-// }
 
-// function DisplayDataInModal(location ,data){
-    
-    // }
     
