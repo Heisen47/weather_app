@@ -12,7 +12,7 @@ btn.addEventListener('click', ()=>{
     if (locationInput.checkValidity()) {
         openModal();
     } else {
-        console.log('Invalid input. Please enter a valid location.');
+        alert('Invalid input. Please enter a valid location.');
     }
 
 });
@@ -42,7 +42,8 @@ function GetData(){
             // console.log (response.json)
         }
         else{
-            throw new Error(response.statusText)
+            // throw new Error(response.statusText);
+            alert('This is not a valid location');
         }
     })
     .then(function(response){
