@@ -1,21 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
-    font-family: 'Roboto', sans-serif;   
+    font-family: 'Roboto', sans-serif;
 }
 
 
-.earthImg{
+.earthImg {
     height: 50px;
     width: 50px;
-    background-image:url('../assets/earth.png');
+    background-image: url('../assets/earth.png');
     background-size: cover;
-    border: none; 
+    border: none;
     vertical-align: middle;
-    margin-right: 5px;  
+    margin-right: 5px;
 }
 
-.header{
+.header {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,9 +24,9 @@
 }
 
 .header p {
-    display: flex; 
-    align-items: center; 
-    margin: 2px; 
+    display: flex;
+    align-items: center;
+    margin: 2px;
 }
 
 /* Modal Styles */
@@ -38,25 +38,25 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-  }
-  
-  .modal-content {
+}
+
+.modal-content {
     background-color: #fff;
     max-width: 450px;
     margin: 100px auto;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  }
-  
-  .close {
+}
+
+.close {
     float: right;
     font-size: 24px;
     font-weight: bold;
     cursor: pointer;
-  }
-  
-  /* Navbar Styles */
+}
+
+/* Navbar Styles */
 .navbar {
     background-color: #75afed;
     color: #fff;
@@ -64,54 +64,54 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  .navbar-brand {
+    width: 100%;
+}
+
+.navbar-brand {
     font-size: 1.5rem;
     font-weight: bold;
-  }
-  
+}
 
-.search-container{
+
+.search-container {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 10%;
 }
 
-#loc{
+#loc {
     font-size: x-large;
     padding: 8px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #030cb9;
 }
 
-#locationInput{
+#locationInput {
     padding: 5px;
     border-radius: 6px;
     border: 1px solid #75afed;
 }
 
-#locationForm{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+#locationForm {
+    text-align: center;
     border: 1px solid #09ac58;
     margin: 15px;
-    width: 500px;
-    height: 180px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    margin-top: 8%;
+    padding: 15px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
     background: url('../assets/clouds.jpg');
     background-size: cover;
     object-fit: cover;
-    opacity: 70%;
+    opacity: 0.7;
+    margin-left: auto;
+    margin-right: auto;
+    transition: width 0.3s;
 }
 
-#btn{
+#btn {
     margin: 15px;
     width: 110px;
     height: 40px;
@@ -121,7 +121,54 @@
     color: solid black;
 }
 
-#btn:hover{
+#btn:hover {
     background: #75afed;
     color: #fff;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer img {
+    height: 30px;
+    width: 30px;
+    vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+    .header {
+        font-size: 18px;
+        margin-top: 55px;
+    }
+
+    /* Adjust styles for smaller screens */
+    .search-container {
+        margin-top: 5%;
+    }
+
+    #locationForm {
+        padding: 10px;
+        width: 75%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #btn {
+        margin-top: 10px;
+    }
+
+    #loc {
+        font-size: small;
+    }
+
+
 }
