@@ -31,7 +31,7 @@ function openModal(e) {
 function GetData(){
     // console.log('fetched!');
     const apiKey = 'dc27680fbc2d439e8db62604230108' ;
-    const location = document.querySelector('#locationInput').value.toUpperCase();
+    const location = document.querySelector('#locationInput').value.toUpperCase().trim();
     const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}`;
 
 
